@@ -7,9 +7,7 @@ RUN echo "deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti" > /etc
     apt-get --assume-yes install unifi && \
     apt-get --assume-yes clean
 
-EXPOSE 8080
-EXPOSE 8443
-EXPOSE 6789
+EXPOSE 8080 8443 6789
 
 RUN mkdir /var/lib/unifi
 COPY system.properties /var/lib/unifi/
